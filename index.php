@@ -7,7 +7,7 @@ include("conexion.php")
     <body>
         <?php
         $nombre="Miguel";
-        $apellidos="Ayala";
+        $apellidos="Ayalaaa";
         $semestre="VI ";
         $carrera="Computaciòn e Informàtica ";
         echo "Hola yo soy ".$nombre." ".$apellidos." del semestre ".$semestre."de la carrera de ".$carrera;//concatenar mensaje
