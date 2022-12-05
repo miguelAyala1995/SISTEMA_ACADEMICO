@@ -1,23 +1,23 @@
 <?php
-include "../conexion.php"; //incluir el archivo de la conexion
-$docente = $_POST['docente']; // recibir datos y guardando en una variable $ocente
-$usuario = $_POST['usuario']; // recibir datos y guardando en una variable $usuario
-$password = $_POST['password']; // recibir datos y guardando en una variable $password
+include "../include/conexion.php"; //incluir el archivo de la conexion
+$docente = $_POST['docente']; //recibir datos y guardando en una variable $docente
+$usuario = $_POST['usuario']; //recibir datos y guardando en una variable $usuario
+$password = $_POST['password']; //recibir datos y guardando en una variable $password
 
-$password_fuerte= password_hash($password, PASSWORD_DEFAULT); //encriptacion del password
+$password_fuerte = password_hash($password, PASSWORD_DEFAULT);// encriptar password
 
-$consulta = "INSERT INTO usuario_docentes (id_docente, usuario, password) VALUES ('$docente', '$usuario', '$password_fuerte')"; //insertar valores 
-$ejec_consulta =mysqli_query($conexion, $consulta); //ejecutar la consulta
-
-if ($ejec_consulta) {  //validar la consulta
+$consulta = "INSERT INTO usuarios_docentes (id_docente, usuario, password) VALUES ('$docente', '$usuario', '$password_fuerte')";
+$ejec_consulta = mysqli_query($conexion, $consulta);
+if($ejec_consulta){
     echo "<script>
-      alert('registro satisfactorio');
-      window.location = '../login.php';
+        alert('Registro Satisfactorio');
+        window.location = '../login.php';
     </script>";
-} else{
+}else{
     echo "<script>
-    alert('error de registro');
-    window.history. back();
-  </script>";
+        alert('Error al registrar usuario');
+        window.history.back();
+    </script>";
 }
+
 ?>
