@@ -71,7 +71,7 @@ $res_busqueda_genero= mysqli_fetch_array($buscar_genero);
                                     <div class="ln_solid"></div>
                                     <div class="form-group">
                                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                            <a href="./genero.php" class="btn btn-warning" type="button">Cancelar</a>
+                                            <a href="./genero.php" class="btn btn-primary" type="button">Cancelar</a>
                                             <button type="submit" class="btn btn-success">Actualizar Datos</button>
                                         </div>
                                     </div>

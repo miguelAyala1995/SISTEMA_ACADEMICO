@@ -57,7 +57,7 @@ include "include/verificar_sesion.php";
 								<table id="example" class="table table-striped table-bordered">
 									<thead>
 										<tr>
-											<th>Identificador</th>
+											<!-- <th>Identificador</th> -->
 											<th>Perido Académico</th>
 											<th>Acciones</th>
 										</tr>
@@ -70,9 +70,9 @@ include "include/verificar_sesion.php";
 										while ($res_bus_per_acad = mysqli_fetch_array($busc_presente_periodo)) {
 										?>
 											<tr>
-												<td><?php 
+												<!-- <td><?php 
 												// Imprimirmos el id
-												echo $res_bus_per_acad['id']; ?></td>
+												// echo $res_bus_per_acad['id']; ?></td> -->
 												<?php
 												// como el periodo academico es una llave foranea extraemos los datos haciendo una busqueda con el id
 												$bus_periodo = buscarPeriodoAcademicoById($conexion, $res_bus_per_acad['id_periodo_acad']);
@@ -84,7 +84,7 @@ include "include/verificar_sesion.php";
 												<td class="d-flex justify-center align-items-center" >
 													<span class="justify-center">
 														<!-- pasamos el id para poder editarlo -->
-														<a href="editar_presente_periodo_academico.php?id=<?php echo $res_bus_per_acad['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
+														<a href="editar_presente_periodo_academico.php?id=<?php echo $res_bus_per_acad['id']; ?>" class="btn btn-primary"> Editar</a>
 												</td>
 											</tr>
 										<?php

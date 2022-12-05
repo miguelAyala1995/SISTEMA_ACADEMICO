@@ -85,7 +85,7 @@ include "include/verificar_sesion.php";
                           <td><?php echo $resultado_busqueda_datos['correo']; ?></td>
                           <td><?php echo $resultado_busqueda_datos['nro_resolucion']; ?></td>
                           <td>
-                            <a href="editar_datos_institucionales.php?id=<?php echo $resultado_busqueda_datos['cod_modular']; ?>" class="btn btn-success"> <i class="fa fa-edit"> </i> Editar</a>
+                            <a href="editar_datos_institucionales.php?id=<?php echo $resultado_busqueda_datos['cod_modular']; ?>" class="btn btn-success"> Editar</a>
                           </td>
                         </tr>
                         <?php

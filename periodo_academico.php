@@ -49,7 +49,7 @@ include "include/verificar_sesion.php";
 								<h2>Periodos Académicos</h2>
 								<ul class="nav navbar-right">
 									<li>
-										<a href="./registrar_periodo_academico.php" class="btn btn-success"><i class="fa fa-plus-square"> </i>  Agregar Nuevo</a>
+										<a href="./registrar_periodo_academico.php" class="btn btn-success"> Agregar Nuevo</a>
 									</li>
 								</ul>
 								<div class="clearfix"></div>
@@ -59,7 +59,6 @@ include "include/verificar_sesion.php";
 								<table id="example" class="table table-striped table-bordered">
 									<thead>
 										<tr>
-											<th>Identificador</th>
 											<th>Periodo Académico</th>
 											<th>Fecha Inicio</th>
 											<th>Fecha Fin</th>
@@ -76,7 +75,6 @@ include "include/verificar_sesion.php";
 										while ($res_bus_periodo_academico = mysqli_fetch_array($buscar_periodo_academico)) {
 										?>
 											<tr>
-												<td><?php echo $res_bus_periodo_academico['id']; ?></td>
 												<td><?php echo $res_bus_periodo_academico['nombre']; ?></td>
 												<td><?php echo $res_bus_periodo_academico['fecha_inicio']; ?></td>
 												<td><?php echo $res_bus_periodo_academico['fecha_fin']; ?></td>
@@ -89,8 +87,8 @@ include "include/verificar_sesion.php";
 												<td><?php echo $res_bus_periodo_academico['fecha_actas']; ?></td>
 												<td class=" d-flex justify-content-center align-items-center">
 													<span class="justify-center">
-														<a href="editar_periodo_academico.php?id=<?php echo $res_bus_periodo_academico['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
-														<a href="operaciones/eliminar_periodo.php?id=<?php echo $res_bus_periodo_academico['id']; ?>" class="btn btn-danger"><i class="fa fa-trash"> </i> Eliminar</a>
+														<a href="editar_periodo_academico.php?id=<?php echo $res_bus_periodo_academico['id']; ?>" class="btn btn-primary"> Editar</a>
+														<a href="operaciones/eliminar_periodo.php?id=<?php echo $res_bus_periodo_academico['id']; ?>" class="btn btn-danger"> Eliminar</a>
 													</span>
 												</td>
 											</tr>

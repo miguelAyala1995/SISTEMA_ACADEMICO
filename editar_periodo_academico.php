@@ -116,7 +116,7 @@ $id_director = $res_bus_per_academico['id_director'];
                   <div class="ln_solid"></div>
                   <div class="form-group">
                     <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                      <a class="btn btn-warning" type="button" href="periodo_academico.php">Cancelar</a>
+                      <a class="btn btn-primary" type="button" href="periodo_academico.php">  </a>
                       <button type="submit" class="btn btn-success">Actualizar Datos</button>
                     </div>
                   </div>

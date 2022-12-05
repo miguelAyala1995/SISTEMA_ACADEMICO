@@ -106,7 +106,7 @@ $id_porgrama_de_estudios = $res_buscar_modulo['id_programa_estudio'];
 									<div class="ln_solid"></div>
 									<div class="form-group">
 										<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-											<a class="btn btn-warning" href="./modulo_formativo.php" type="button">Cancelar</a>
+											<a class="btn btn-primary" href="./modulo_formativo.php" type="button">Cancelar</a>
 											<button type="submit" class="btn btn-success">Guardar</button>
 										</div>
 									</div>
