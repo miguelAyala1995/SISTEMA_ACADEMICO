@@ -1,6 +1,6 @@
 <?php
 include "../include/conexion.php";
-include "../include/busquedas.php";
+
 $dni = $_POST['dni'];
 $nom_ap = $_POST['nom_ap'];
 $id_genero = $_POST['id_genero'];

@@ -60,7 +60,6 @@ include "include/verificar_sesion.php";
                                 <table id="example" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>ID</th>
                                             <th>CODIGO</th>
                                             <th>TIPO</th>
                                             <th>NOMBRE</th>
@@ -77,7 +76,7 @@ include "include/verificar_sesion.php";
                                         ?>
                                             <tr>
                                                 <!-- Imprimimos los datos que queremos mostrar -->
-                                                <td><?php echo $res_buscar_programa['id']; ?></td>
+                                                <!-- <td><?php echo $res_buscar_programa['id']; ?></td> -->
                                                 <td><?php echo $res_buscar_programa['codigo']; ?></td>
                                                 <td><?php echo $res_buscar_programa['tipo'];  ?></td>
                                                 <td><?php echo $res_buscar_programa['nombre']; ?></td>

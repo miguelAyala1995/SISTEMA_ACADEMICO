@@ -91,6 +91,7 @@ include "include/verificar_sesion.php";
                                                 <td>
                                                     <span class="justify-center">
                                                     <a href="editar_modulos.php?id=<?php echo $res_buscar_modulo['id']; ?>" class="btn btn-primary"> Editar  </a>
+                                                    <a href="./operaciones/eliminar_modulo.php?id=<?php echo $res_buscar_modulo['id']; ?>" class="btn btn-danger"> Eliminar  </a>
                                                 </td>
                                             </tr>
                                         <?php

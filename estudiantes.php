@@ -44,7 +44,7 @@ include ('include/verificar_sesion.php');
                     <h2>Relacion de Estudiantes</h2>
                     <ul class="nav navbar-right">
                       <li>
-                        <a href="estudiante.php" class="btn btn-success"><i class="fa fa-plus-square"> </i> Agregar nuevo</a>
+                        <a href="estudiante.php" class="btn btn-success">Agregar nuevo</a>
                       </li>
                     </ul>
                     <div class="clearfix"></div>
@@ -54,7 +54,6 @@ include ('include/verificar_sesion.php');
                     <table id="example" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Id</th>
                           <th>DNI</th>
                           <th>APELLIDOS Y NOMBRES</th>
                           <th>DIRECCION</th>
@@ -69,8 +68,7 @@ include ('include/verificar_sesion.php');
                         $b_estudiantes = buscarEstudiantes($conexion);
                         while ($res_b_estudiantes = mysqli_fetch_array($b_estudiantes)) {
                         ?>
-                        <tr>
-                          <td><?php echo $res_b_estudiantes['id']; ?></td>
+                        <tr
                           <td><?php echo $res_b_estudiantes['dni']; ?></td>
                           <td><?php echo $res_b_estudiantes['apellidos_nombres'];  ?></td>
                           <td><?php echo $res_b_estudiantes['direccion']; ?></td>
@@ -84,8 +82,8 @@ include ('include/verificar_sesion.php');
                           <td><?php echo $res_b_id_programa['nombre']; ?></td>
                           <td><?php echo $res_b_id_semestre['descripcion']; ?></td>
                           <td>
-                            <a href="editar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-primary"><i class="fa fa-edit"> </i> Editar</a>
-                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-danger"><i class="fa fa-trash"> </i> Eliminar</a>
+                            <a href="editar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-primary"> Editar</a>
+                            <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_b_estudiantes['id']; ?>" class="btn btn-danger"> Eliminar</a>
                           </td>
                         </tr>
                         <?php

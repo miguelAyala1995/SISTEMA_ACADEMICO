@@ -59,7 +59,7 @@ include "include/verificar_sesion.php";
                                 <table id="example" class="table table-striped table-bordered">
                                     <thead>
                                         <tr>
-                                            <th>Identificador</th>
+                                            <!-- <th>Identificador</th> -->
                                             <th>Cargo</th>
                                             <th>Acciones</th>
                                         </tr>
@@ -73,12 +73,13 @@ include "include/verificar_sesion.php";
                                         ?>
                                             <tr>
                                                 <!-- Imprimimos los valores de nuestra busqueda -->
-                                                <td><?php echo $res_busqueda_cargo['id']; ?></td>
+                                                <!-- <td><?php echo $res_busqueda_cargo['id']; ?></td> -->
                                                 <td><?php echo $res_busqueda_cargo['descripcion']; ?></td>
-                                                <td>
+                                                <td class="d-flex ">
                                                     <span class="justify-center">
                                                         <!-- Enviamos el id de lo que queremos editar -->
                                                     <a href="editar_cargo.php?id=<?php echo $res_busqueda_cargo['id']; ?>" class="btn btn-primary"> Editar</a>
+                                                    <a href="operaciones/eliminar_cargo.php?id=<?php echo $res_busqueda_cargo['id']; ?>" class="btn btn-danger"> Eliminar</a>
                                                 </td>
                                             </tr>
                                         <?php

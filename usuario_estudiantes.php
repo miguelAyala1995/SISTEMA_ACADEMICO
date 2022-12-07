@@ -1,10 +1,7 @@
 <?php
-// Incluimos la conexion
-include "include/conexion.php";
-// Incluimos las busqueda para hacer uso de este
-include "include/busquedas.php";
-// Verificamos que el inicio de sesion se haya hecho para que nadie acceda a esta carpeta
-include "include/verificar_sesion.php";
+include('./include/conexion.php');
+include('./include/busquedas.php');
+include('include/verificar_sesion.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +12,7 @@ include "include/verificar_sesion.php";
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Periodo académico | </title>
+	<title>Usuario estudiantes | </title>
 	<!-- Bootstrap -->
 	<link href="Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Font Awesome -->
@@ -39,6 +36,7 @@ include "include/verificar_sesion.php";
 	<div class="container body">
 		<div class="main_container">
 			<?php include "include/menu.php" ?>
+
 			<!-- Menu en la parte superior -->
 			<!-- page content -->
 			<div class="right_col" role="main">
@@ -46,10 +44,10 @@ include "include/verificar_sesion.php";
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<div class="x_panel">
 							<div class="x_title">
-								<h2>Periodos Académicos</h2>
+								<h2>Usuario de los docentes</h2>
 								<ul class="nav navbar-right">
 									<li>
-										<a href="./registrar_periodo_academico.php" class="btn btn-success"> Agregar Nuevo</a>
+										<a href="estudiante.php" class="btn btn-success">Agregar Nuevo</a>
 									</li>
 								</ul>
 								<div class="clearfix"></div>
@@ -59,42 +57,33 @@ include "include/verificar_sesion.php";
 								<table id="example" class="table table-striped table-bordered">
 									<thead>
 										<tr>
-											<th>Periodo Académico</th>
-											<th>Fecha Inicio</th>
-											<th>Fecha Fin</th>
-											<th>Director</th>
-											<th>Fecha Actas</th>
+											<th>Id</th>
+											<th>Usuario</th>
+											<th>Nombres y apellidos</th>
 											<th>Acciones</th>
 										</tr>
 									</thead>
 									<tbody>
 										<?php
-										// buscamos periodos academicos  y las mostramos en nuestra tabla
-										$buscar_periodo_academico = buscarPeriodoAcademico($conexion);
-										// el resultado lo extraemos con un while
-										while ($res_bus_periodo_academico = mysqli_fetch_array($buscar_periodo_academico)) {
+										$b_u_estudiantes = buscarUserEstudiante($conexion);
+										while ($res_b_u_estudiante = mysqli_fetch_array($b_u_estudiantes)) {
 										?>
 											<tr>
-												<td><?php echo $res_bus_periodo_academico['nombre']; ?></td>
-												<td><?php echo $res_bus_periodo_academico['fecha_inicio']; ?></td>
-												<td><?php echo $res_bus_periodo_academico['fecha_fin']; ?></td>
-												<?php
-												// como el docente es una llave foranea hacemos esta busqueda para obtener sus datos desde la tabla docentes
-												$buscar_docente = buscarDocenteById($conexion, $res_bus_periodo_academico['id_director']);
-												$res_busqueda_id = mysqli_fetch_array($buscar_docente);
+												<td><?php echo $res_b_u_estudiante['usuario']; ?></td>
+												<?php 
+													$b_estudiante = buscarEstudianteById($conexion, $res_b_u_estudiante['id_estudiante']);
+													$res_b_id_estudiante = mysqli_fetch_array($b_estudiante);
 												?>
-												<td><?php echo $res_busqueda_id['apellidos_nombres']; ?></td>
-												<td><?php echo $res_bus_periodo_academico['fecha_actas']; ?></td>
-												<td class=" d-flex justify-content-center align-items-center">
-													<span class="justify-center">
-														<a href="editar_periodo_academico.php?id=<?php echo $res_bus_periodo_academico['id']; ?>" class="btn btn-primary"> Editar</a>
-														<a href="operaciones/eliminar_periodo_academico.php?id=<?php echo $res_bus_periodo_academico['id']; ?>" class="btn btn-danger"> Eliminar</a>
-													</span>
+												<td><?php echo $res_b_id_estudiante['apellidos_nombres'];  ?></td>
+												<td>
+													<a href="editar_usu_estudiante.php?id=<?php echo $res_b_u_estudiante['id']; ?>" class="btn btn-primary"> Editar</a>
+													<a href="operaciones/eliminar_usuario_estudiantes.php?id=<?php echo $res_b_u_estudiante['id']; ?>" class="btn btn-danger"> Eliminar</a>
 												</td>
 											</tr>
 										<?php
 										}
 										?>
+
 									</tbody>
 								</table>
 							</div>
