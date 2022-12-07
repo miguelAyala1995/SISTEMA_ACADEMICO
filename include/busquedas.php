@@ -196,3 +196,4 @@ function buscar_pre_p_academicoById($conexion, $id)
     $sql = "SELECT * FROM presente_periodo_acad WHERE id='$id'";
     return mysqli_query($conexion, $sql);
 }
+

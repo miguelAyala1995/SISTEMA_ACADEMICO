@@ -85,7 +85,7 @@ include "include/verificar_sesion.php";
                                                 <td>
                                                     <span class="justify-center">
                                                     <a href="editar_programa.php?id=<?php echo $res_buscar_programa['id']; ?>" class="btn btn-primary">Editar</a>
-                                                    <a href="operaciones/eliminar_estudiante.php?id=<?php echo $res_buscar_programa['id']; ?>" class="btn btn-danger">Eliminar</a>
+                                                    <a href="operaciones/eliminar_programa.php?id=<?php echo $res_buscar_programa['id']; ?>" class="btn btn-danger">Eliminar</a>
                                                     </span>
                                                 </td>
                                             </tr>

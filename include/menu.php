@@ -1,19 +1,27 @@
-<div class="col-md-3 left_col">
+        
+        <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-user"></i> <span>Informacion Personal!</span></a>
+              <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span class="h4">Sistema Académico</span></a>
             </div>
 
             <div class="clearfix"></div>
 
+            <?php
+            $buscar_usu_docente_sesion = buscarUsuarioDocenteById($conexion, $_SESSION['id_usu_sisacad_iesthuanta']);
+            $res_b_u_s = mysqli_fetch_array($buscar_usu_docente_sesion);
+            $id_d_b_S = $res_b_u_s['id_docente'];
+            $buscar_docente_sesion = buscarDocenteById($conexion, $id_d_b_S);
+            $res_b_d_s = mysqli_fetch_array($buscar_docente_sesion);
+            ?>
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="Logo/imagen.jpg" alt="..." class="img-circle profile_img">
+                <img src="Gentella/production/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
-                <h2>Miguel Ayala</h2>
+                <h2><?php echo $res_b_d_s['apellidos_nombres']; ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -26,47 +34,45 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
                   <li><a href="index.php"><i class="fa fa-home"></i> Inicio </a>
-                  
+
                   </li>
-                  <li><a><i class="fa fa-file-text-o"></i> DATOS INSTITUCIONALES <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-edit"></i> Datos Institucionales <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="datos_institucionales.php">Datos Institucionales</a></li>
-                      <li><a href="periodo_academico.php">Periodo Academico</a></li>
-                      <li><a href="presente_periodo_academico.php">Presente Periodo Academico</a></li>
+                      <li><a href="periodo_academico.php">Periodo Académico</a></li>
+                      <li><a href="presente_periodo_academico.php">Presente Periodo Académico</a></li>
                       <li><a href="programa_estudios.php">Programa de Estudios</a></li>
-                      <li><a href="modulo_formativo.php">Modulos Formativos</a></li>
+                      <li><a href="modulo_formativo.php">Modulos formativos</a></li>
                       <li><a href="semestre.php">Semestre</a></li>
-                      <li><a href="unidades_didacticas.php">Unidades Didacticas</a></li>
+                      <li><a href="unidad_didactica.php">Unidades didacticas</a></li>
                       <li><a href="cargo.php">Cargo</a></li>
-                      <li><a href="genero.php">Genero</a></li>
+                      <li><a href="genero.php">Género</a></li>
+                      
                     </ul>
                   </li>
-
-                  <li><a><i class="fa fa-user"></i> Programacion Academica <span class="fa fa-chevron-down"></span></a>
+                  <!--<li><a><i class="fa fa-desktop"></i> Programación Académica <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="prog_ud.php">Programas de Unidades Didacticas</a></li>
-                      <li><a href="matricula.php">Matricula</a></li>
-                      <li><a href="calificaciones.php">Calificaciones</a></li>
-                      <li><a href="condicion.php">Condicion</a></li>
+                      <li><a href="prog_ud.php">Programación de Unidades Didacticas</a></li>
+                      <li><a href="matricula.php"> Matrícula</a></li>
+                      <li><a href="calificacion.php"> Calificaciones</a></li>
+                      <li><a href="condicion.php"> Condición</a></li>
+                    </ul>
+                  </li>-->
+                  <li><a href="condicion.php">Condición</a></li>
+                  <li><a><i class="fa fa-desktop"></i> Docentes <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="docentes.php">Docente</a></li>
+                      <li><a href="usuario_docentes.php">Usuarios Docentes</a></li>
                     </ul>
                   </li>
-
-                  <li><a><i class="fa fa-user"></i> DOCENTES <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-book"></i> Estudiantes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="general_elements.html">Docente</a></li>
-                      <li><a href="media_gallery.html">Usuarios Docentes</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-graduation-cap"></i> ESTUDIANTES <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="tables.html">Estudiante</a></li>
-                      <li><a href="tables_dynamic.html">Usuario Estudiante</a></li>
+                      <li><a href="estudiantes.php">Estudiante</a></li>
+                      <li><a href="usuario_estudiantes.php">Usuarios Estudiante</a></li>
                     </ul>
                   </li>
                 </ul>
               </div>
-
-
             </div>
             <!-- /sidebar menu -->
 
@@ -99,11 +105,11 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="logo/imagen.jpg" alt="">Miguel Angel
+                    <img src="Gentella/production/images/img.jpg" alt=""><?php echo $res_b_d_s['apellidos_nombres']; ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Profile</a></li>
+                    <li><a href="javascript:;">Profile</a></li>
                     <li>
                       <a href="javascript:;">
                         <span class="badge bg-red pull-right">50%</span>
@@ -111,73 +117,13 @@
                       </a>
                     </li>
                     <li><a href="javascript:;">Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="operaciones/cerrar_sesion.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
 
                 <li role="presentation" class="dropdown">
-                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-envelope-o"></i>
-                    <span class="badge bg-green">6</span>
-                  </a>
-                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="text-center">
-                        <a>
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
-                        </a>
-                      </div>
-                    </li>
-                  </ul>
+                  <p href="javascript:;" class="dropdown-toggle info-number px-2" data-toggle="dropdown" aria-expanded="false">
+                  </p>
                 </li>
               </ul>
             </nav>
