@@ -27,7 +27,7 @@ if ($c_r_b_docente === 0) {
     $res_b_docente = mysqli_fetch_array($b_id_docente);
     
     $id_docente = $res_b_docente['id'];
-    $pass = "@".$dni;
+    $pass = $dni ;
     $password_fuerte = password_hash($pass, PASSWORD_DEFAULT);
 
     $insertar_usu = "INSERT INTO usuarios_docentes (id_docente, usuario, password) VALUES ('$id_docente', '$dni', '$password_fuerte')";

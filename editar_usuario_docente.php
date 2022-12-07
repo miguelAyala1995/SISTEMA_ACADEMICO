@@ -56,6 +56,10 @@ $id_user_docente = $res_b_user['id_docente'];
 								<br />
 								<form class="form-horizontal form-label-left" method="POST" action="operaciones/actualizar_usuario_docente.php">
 									<input type="hidden" name="id" value="<?php echo $id_docente; ?>">
+									<!--<div class="form-group">
+										<label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Nombres del docente :
+										</label>
+										<div class="col-md-6 col-sm-6 col-xs-12">
 											<?php 
 											$b_docente = buscarDocenteById($conexion, $id_user_docente);
 											$res_b_docente = mysqli_fetch_array($b_docente);

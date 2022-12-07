@@ -24,7 +24,7 @@ $id_periodo_acad = $res_bus_per_periodo['id_periodo_acad']
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Gentelella Alela! | </title>
+	<title>Editar presente periodo academico - IESTPHUANTA </title>
 
 	<!-- Bootstrap -->
 	<link href="./Gentella/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
