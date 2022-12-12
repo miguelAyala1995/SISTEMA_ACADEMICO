@@ -46,7 +46,7 @@
                       <li><a href="semestre.php">Semestre</a></li>
                       <li><a href="unidad_didactica.php">Unidades didacticas</a></li>
                       <li><a href="cargo.php">Cargo</a></li>
-                      <li><a href="genero.php">Género</a></li>
+                      <li><a href="genero.php">Genero</a></li>
                       
                     </ul>
                   </li>
