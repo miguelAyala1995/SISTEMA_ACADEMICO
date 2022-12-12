@@ -3,5 +3,10 @@
   
     $conexion =mysqli_connect("localhost","ceicom_miguel","WSGZ7Qy$?VX[","ceicom_miguel");
     //$conexion =mysqli_connect("localhost","root","root","sistema_academico");
-    
+
+    if ($conexion) {
+
+    } else {
+       echo "conexion fallida";
+    }
 ?>
