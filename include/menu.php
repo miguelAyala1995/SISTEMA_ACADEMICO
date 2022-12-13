@@ -47,6 +47,7 @@
                       <li><a href="unidad_didactica.php">Unidades didacticas</a></li>
                       <li><a href="cargo.php">Cargo</a></li>
                       <li><a href="genero.php">Género</a></li>
+                      <li><a href="condicion.php">Condición</a></li>
                       
                     </ul>
                   </li>
@@ -58,7 +59,7 @@
                       <li><a href="condicion.php"> Condición</a></li>
                     </ul>
                   </li>-->
-                  <li><a href="condicion.php">Condición</a></li>
+                  
                   <li><a><i class="fa fa-desktop"></i> Docentes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="docentes.php">Docente</a></li>

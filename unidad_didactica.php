@@ -50,7 +50,7 @@ include "include/verificar_sesion.php";
 								<h2>Unidades didácticas</h2>
 								<ul class="nav navbar-right">
 									<li>
-										<a href="./u_didactica.php" class="btn btn-success"><i class="fa fa-plus-square"> </i> Agregar nuevo</a>
+										<a href="./registrar_unidad_didactica.php" class="btn btn-success"><i class="fa fa-plus-square"> </i> Agregar nuevo</a>
 									</li>
 								</ul>
 								<div class="clearfix"></div>
