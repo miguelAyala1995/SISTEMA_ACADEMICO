@@ -2,7 +2,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span class="h4">Sistema Académico</span></a>
+              <a href="index.php" class="site_title"><i class="fa  fa-graduation-cap"></i> <span class="h4">Sistema Academico</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -17,7 +17,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="Gentella/production/images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="logo/imagen.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Bienvenido,</span>
@@ -46,6 +46,7 @@
                       <li><a href="semestre.php">Semestre</a></li>
                       <li><a href="unidad_didactica.php">Unidades didacticas</a></li>
                       <li><a href="cargo.php">Cargo</a></li>
+<<<<<<< HEAD
                       <li><a href="genero.php">Género</a></li>
                       <li><a href="condicion.php">Condición</a></li>
                       
@@ -60,6 +61,13 @@
                     </ul>
                   </li>-->
                   
+=======
+                      <li><a href="genero.php">Genero</a></li>
+                      
+                    </ul>
+                  </li>
+                  <li><a href="condicion.php">Condición</a></li>
+>>>>>>> d7c976bf2c72045068c744a6773110ae6fe6ebbd
                   <li><a><i class="fa fa-desktop"></i> Docentes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="docentes.php">Docente</a></li>
@@ -106,19 +114,19 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="Gentella/production/images/img.jpg" alt=""><?php echo $res_b_d_s['apellidos_nombres']; ?>
+                    <img src="logo/imagen.jpg" alt=""><?php echo $res_b_d_s['apellidos_nombres']; ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;">Profile</a></li>
+                    <li><a href="javascript:;">Perfil</a></li>
                     <li>
                       <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>Settings</span>
+                        <span class="badge bg-red pull-right">80%</span>
+                        <span>Ajustes</span>
                       </a>
                     </li>
-                    <li><a href="javascript:;">Help</a></li>
-                    <li><a href="operaciones/cerrar_sesion.php"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="javascript:;">Ayuda</a></li>
+                    <li><a href="operaciones/cerrar_sesion.php"><i class="fa fa-sign-out pull-right"></i>Cerrar sesión</a></li>
                   </ul>
                 </li>
 
@@ -130,4 +138,3 @@
             </nav>
           </div>
         </div>
-        <!-- /top navigation -->
