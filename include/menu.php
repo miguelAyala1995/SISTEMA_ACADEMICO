@@ -1,4 +1,3 @@
-        
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
@@ -46,10 +45,9 @@
                       <li><a href="semestre.php">Semestre</a></li>
                       <li><a href="unidad_didactica.php">Unidades didacticas</a></li>
                       <li><a href="cargo.php">Cargo</a></li>
-<<<<<<< HEAD
                       <li><a href="genero.php">Género</a></li>
                       <li><a href="condicion.php">Condición</a></li>
-                      
+
                     </ul>
                   </li>
                   <!--<li><a><i class="fa fa-desktop"></i> Programación Académica <span class="fa fa-chevron-down"></span></a>
@@ -60,26 +58,19 @@
                       <li><a href="condicion.php"> Condición</a></li>
                     </ul>
                   </li>-->
-                  
-=======
-                      <li><a href="genero.php">Genero</a></li>
-                      
-                    </ul>
-                  </li>
-                  <li><a href="condicion.php">Condición</a></li>
->>>>>>> d7c976bf2c72045068c744a6773110ae6fe6ebbd
-                  <li><a><i class="fa fa-desktop"></i> Docentes <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="docentes.php">Docente</a></li>
-                      <li><a href="usuario_docentes.php">Usuarios Docentes</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-book"></i> Estudiantes <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="estudiantes.php">Estudiante</a></li>
-                      <li><a href="usuario_estudiantes.php">Usuarios Estudiante</a></li>
-                    </ul>
-                  </li>
+                </li>
+                <li><a><i class="fa fa-desktop"></i> Docentes <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="docentes.php">Docente</a></li>
+                    <li><a href="usuario_docentes.php">Usuarios Docentes</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-book"></i> Estudiantes <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="estudiantes.php">Estudiante</a></li>
+                    <li><a href="usuario_estudiantes.php">Usuarios Estudiante</a></li>
+                  </ul>
+                </li>
                 </ul>
               </div>
             </div>
