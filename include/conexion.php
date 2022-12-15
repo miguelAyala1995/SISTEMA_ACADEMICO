@@ -9,4 +9,5 @@
     } else {
        echo "conexion fallida";
     }
+    $conexion->set_charset('utf8');
 ?>

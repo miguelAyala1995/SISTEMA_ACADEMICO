@@ -64,6 +64,7 @@ include "include/verificar_sesion.php";
                                             <th>TIPO</th>
                                             <th>NOMBRE</th>
                                             <th>RESOLUCION</th>
+                                            <th>ACCIONES</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -76,7 +77,6 @@ include "include/verificar_sesion.php";
                                         ?>
                                             <tr>
                                                 <!-- Imprimimos los datos que queremos mostrar -->
-                                                <!-- <td><?php echo $res_buscar_programa['id']; ?></td> -->
                                                 <td><?php echo $res_buscar_programa['codigo']; ?></td>
                                                 <td><?php echo $res_buscar_programa['tipo'];  ?></td>
                                                 <td><?php echo $res_buscar_programa['nombre']; ?></td>

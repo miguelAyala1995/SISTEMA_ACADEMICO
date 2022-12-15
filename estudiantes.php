@@ -60,7 +60,7 @@ include ('include/verificar_sesion.php');
                           <th>SECCION</th>
                           <th>CARRERA</th>
                           <th>SEMESTRE</th>
-                          <th>Acciones</th>
+                          <th th>Acciones</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -68,7 +68,7 @@ include ('include/verificar_sesion.php');
                         $b_estudiantes = buscarEstudiantes($conexion);
                         while ($res_b_estudiantes = mysqli_fetch_array($b_estudiantes)) {
                         ?>
-                        <tr
+                        <tr>
                           <td><?php echo $res_b_estudiantes['dni']; ?></td>
                           <td><?php echo $res_b_estudiantes['apellidos_nombres'];  ?></td>
                           <td><?php echo $res_b_estudiantes['direccion']; ?></td>

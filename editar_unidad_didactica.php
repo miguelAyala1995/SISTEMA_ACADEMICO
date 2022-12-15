@@ -193,7 +193,7 @@ $id_semestre= $res_busqueda_unidad_didactica['id_semestre'];
 									<div class="ln_solid"></div>
 									<div class="form-group">
 										<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-											<a href="./unidad_didactica.php" class="btn btn-warning	" type="button">Cancelar</a>
+											<a href="./unidad_didactica.php" class="btn btn-primary	" type="button">Cancelar</a>
 											<button type="submit" class="btn btn-success">Actualizar Datos</button>
 										</div>
 									</div>

@@ -57,7 +57,6 @@ include('include/verificar_sesion.php');
 								<table id="example" class="table table-striped table-bordered">
 									<thead>
 										<tr>
-											<th>Id</th>
 											<th>Usuario</th>
 											<th>Nombres y apellidos</th>
 											<th>Acciones</th>
@@ -76,7 +75,7 @@ include('include/verificar_sesion.php');
 												?>
 												<td><?php echo $res_b_id_estudiante['apellidos_nombres'];  ?></td>
 												<td>
-													<a href="editar_usu_estudiante.php?id=<?php echo $res_b_u_estudiante['id']; ?>" class="btn btn-primary"> Editar</a>
+													<a href="editar_usuario_estudiante.php?id=<?php echo $res_b_u_estudiante['id']; ?>" class="btn btn-primary"> Editar</a>
 													<a href="operaciones/eliminar_usuario_estudiantes.php?id=<?php echo $res_b_u_estudiante['id']; ?>" class="btn btn-danger"> Eliminar</a>
 												</td>
 											</tr>
